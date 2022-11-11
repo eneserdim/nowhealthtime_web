@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{220D3505-A1AF-4414-AF30-CF3CF5600E0C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nowhealthtime_web</RootNamespace>
+    <AssemblyName>nowhealthtime_web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44321</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NowHealthTimeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\classes\About.cs" />
+    <Compile Include="Models\classes\Blog.cs" />
+    <Compile Include="Models\classes\BlogCategory.cs" />
+    <Compile Include="Models\classes\Contact.cs" />
+    <Compile Include="Models\classes\Context.cs" />
+    <Compile Include="Models\classes\Reference.cs" />
+    <Compile Include="Models\classes\Service.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Theme\hisfull-medical\about-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\about-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\about.html" />
+    <Content Include="Content\Theme\hisfull-medical\advance-tab.html" />
+    <Content Include="Content\Theme\hisfull-medical\alert.html" />
+    <Content Include="Content\Theme\hisfull-medical\assets\css\bootstrap.min.css" />
+    <Content Include="Content\Theme\hisfull-medical\assets\css\em-breadcrumb.css" />
+    <Content Include="Content\Theme\hisfull-medical\assets\css\plugin_theme_css.css" />
+    <Content Include="Content\Theme\hisfull-medical\assets\css\responsive.css" />
+    <Content Include="Content\Theme\hisfull-medical\assets\css\style.css" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\aprova0698.svg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\fontawesome-webfont3295.svg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\icofont.svg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\themify.svg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\5.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\about-1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\about-2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\appomentbg.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\b1.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\b2.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\b3.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\b4.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\b5.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\bg-why.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\blog-bg.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\body.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\comment.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\countdown-thumb.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\cursol_thumb-01.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\cursol_thumb-02.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\cursol_thumb-03.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\cursol_thumb-04.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\cursol_thumb-05.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\cursol_thumb-06.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\faq-image-1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\faq-image-2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\favicon.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\fea-12.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\feature-thumb-01.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\feature-thumb-02.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-12.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-13.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-14.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-15.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-16.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-17.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-18.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-3.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-4.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-5.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-6.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-blog-9.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-counter-bg.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-single-blog.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\hisfull-single-blog2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\logo.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\maps.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\Newsletter-bg-image.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\Newsletter-png-image.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\novo1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\novo2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port3.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port4.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port5.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port6.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port7.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\port8.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\recnet_thumb-01.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\recnet_thumb-02.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\recnet_thumb-03.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\s1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\s2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\s3.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-1.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-3.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-4.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-bg-shape.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-shape.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-thumb-01.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-thumb-02.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\service-thumb-03.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\sing.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\sing.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\slider-image.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\slider-image2.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\slidera.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\sliderb.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\sliderc.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\solution.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-1.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-2.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-3.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-4.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-img01.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-img02.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-img03.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\team-img04.jpg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\testimonial-1.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\testimonial-2.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\testimonial3.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\images\tlogo.png" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\ajax-mail.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\BeerSlider.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\bootstrap.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\customizer.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\isotope.pkgd.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\jquery.appear.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\jquery.knob.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\jquery.meanmenu.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\jquery.nivo.slider.pack.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\jquery.waitforimages.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\map.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\modernizr.custom.79639.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\owl.carousel.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\slick.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\theme-pluginjs.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\theme.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\vendor\jquery-3.5.1.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\Theme\hisfull-medical\blog-both-sidebar.html" />
+    <Content Include="Content\Theme\hisfull-medical\blog-left-2column.html" />
+    <Content Include="Content\Theme\hisfull-medical\blog-left-sidebar.html" />
+    <Content Include="Content\Theme\hisfull-medical\blog-right-2column.html" />
+    <Content Include="Content\Theme\hisfull-medical\blog-right-sidebar.html" />
+    <Content Include="Content\Theme\hisfull-medical\blog.html" />
+    <Content Include="Content\Theme\hisfull-medical\call-to-action.html" />
+    <Content Include="Content\Theme\hisfull-medical\contact-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\contact-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\contact-4.html" />
+    <Content Include="Content\Theme\hisfull-medical\contact-5.html" />
+    <Content Include="Content\Theme\hisfull-medical\contact.html" />
+    <Content Include="Content\Theme\hisfull-medical\countdown.html" />
+    <Content Include="Content\Theme\hisfull-medical\counter.html" />
+    <Content Include="Content\Theme\hisfull-medical\cursol-images.html" />
+    <Content Include="Content\Theme\hisfull-medical\faq.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-10.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-4.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-5.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-6.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-7.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-8.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature-9.html" />
+    <Content Include="Content\Theme\hisfull-medical\feature.html" />
+    <Content Include="Content\Theme\hisfull-medical\icon-boxes.html" />
+    <Content Include="Content\Theme\hisfull-medical\image-box.html" />
+    <Content Include="Content\Theme\hisfull-medical\index-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\index-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\index.html" />
+    <Content Include="Content\Theme\hisfull-medical\mail.php" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-4.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-5.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-6.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-7.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-8.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients-9.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-clients.html" />
+    <Content Include="Content\Theme\hisfull-medical\our-process.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio-3column.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio-4column.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio-full-3column.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio-full-4column.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio-grid-3column.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio-grid-4column.html" />
+    <Content Include="Content\Theme\hisfull-medical\portfolio.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-10.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-11.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-12.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-13.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-4.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-5.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-6.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-7.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-8.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane-9.html" />
+    <Content Include="Content\Theme\hisfull-medical\pricing-plane.html" />
+    <Content Include="Content\Theme\hisfull-medical\progress-bar.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-10.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-11.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-12.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-13.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-14.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-15.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-16.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-17.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-18.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-4.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-5.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-6.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-7.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-8.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-9.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-four.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-one.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-three.html" />
+    <Content Include="Content\Theme\hisfull-medical\service-two.html" />
+    <Content Include="Content\Theme\hisfull-medical\service.html" />
+    <Content Include="Content\Theme\hisfull-medical\single-blog.html" />
+    <Content Include="Content\Theme\hisfull-medical\single-portfolio.html" />
+    <Content Include="Content\Theme\hisfull-medical\single-service.html" />
+    <Content Include="Content\Theme\hisfull-medical\single-team.html" />
+    <Content Include="Content\Theme\hisfull-medical\sliders.html" />
+    <Content Include="Content\Theme\hisfull-medical\stroke-text.html" />
+    <Content Include="Content\Theme\hisfull-medical\style.css" />
+    <Content Include="Content\Theme\hisfull-medical\team-10.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-11.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-12.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-13.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-2.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-3.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-4.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-5.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-6.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-7.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-8.html" />
+    <Content Include="Content\Theme\hisfull-medical\team-9.html" />
+    <Content Include="Content\Theme\hisfull-medical\team.html" />
+    <Content Include="Content\Theme\hisfull-medical\typography.html" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\close.gif" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\next.gif" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\preload-circle.png" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\preload-dots.png" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\preload-ios.png" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\preload-quads.png" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\preload.png" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\prev.gif" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\venobox.css" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\venobox.js" />
+    <Content Include="Content\Theme\hisfull-medical\venobox\venobox.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\aprova0698.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\aprova0698.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\aprova0698.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\fontawesome-webfont3295.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\fontawesome-webfont3295.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\fontawesome-webfont3295.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\fontawesome-webfont3295.woff2" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\icofont.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\icofont.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\icofont.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\icofont.woff2" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\Sofia Pro Bold.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\Sofia Pro Regular.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\themify.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\themify.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\fonts\themify.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\js\bootstrap.min.js.map" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\Theme\hisfull-medical\assets\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\Theme\hisfull-medical\debug.log" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NowHealthTime\anasayfa.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50312</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44321/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
